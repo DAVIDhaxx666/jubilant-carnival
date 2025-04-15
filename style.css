@@ -1,0 +1,39 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    text-align: center;
+    background-color: #121212;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 36px;
+    color: white;
+    text-shadow: 0 0 5px #fff, 0 0 10px #ff0099, 0 0 20px #00ffff;
+    animation: glow 1.5s infinite alternate;
+    z-index: 2;
+    position: relative;
+}
+
+p {
+    font-size: 15px;
+    margin-top: 10px;
+    font-family: 'Press Start 2P', cursive;
+    text-shadow: 0 0 5px #fff, 0 0 10px #ff0099, 0 0 20px #00ffff;
+    animation: glow 1.5s infinite alternate;
+    z-index: 2;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 5px #fff, 0 0 10px #ff0099, 0 0 20px #00ffff;
+    }
+    to {
+        text-shadow: 0 0 10px #fff, 0 0 20px #ff0099, 0 0 40px #00ffff;
+    }
+}
