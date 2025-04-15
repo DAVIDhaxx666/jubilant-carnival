@@ -14,18 +14,31 @@
     <div class="contact-container">
         <h2>Contact Us</h2>
         <p>Have questions or suggestions? Reach out below!</p>
-        <form action="#" method="post">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+<form onsubmit="sendEmail(); return false;">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" placeholder="Enter your name" required>
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" placeholder="Enter your email" required>
 
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" placeholder="Type your message here..." required></textarea>
+    <label for="message">Message:</label>
+    <textarea id="message" name="message" placeholder="Type your message here..." required></textarea>
 
-            <button type="submit">Send Message</button>
-        </form>
+    <button type="submit">Send Message</button>
+</form>
+
+<script>
+    function sendEmail() {
+        const name = encodeURIComponent(document.getElementById("name").value);
+        const email = encodeURIComponent(document.getElementById("email").value);
+        const message = encodeURIComponent(document.getElementById("message").value);
+
+        const mailtoLink = `mailto:your-email@example.com?subject=Message from ${name}&body=Name: ${name}%0AEmail: ${email}%0A%0A${message}`;
+
+        window.location.href = mailtoLink;
+    }
+</script>
+
     </div>
 </body>
 </html>
