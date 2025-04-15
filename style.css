@@ -1,3 +1,4 @@
+
 body {
     display: flex;
     justify-content: center;
@@ -24,7 +25,33 @@ h1 {
     position: relative;
 }
 
+h2 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 24px;
+    color: white;
+    text-shadow: 0 0 5px #fff, 0 0 10px #ff0099, 0 0 20px #00ffff;
+    animation: glow 1.5s infinite alternate;
+    z-index: 2;
+    position: relative;
+}
+
 p {
+    font-size: 15px;
+    margin-top: 10px;
+    font-family: 'Press Start 2P', cursive;
+    text-shadow: 0 0 5px #fff, 0 0 10px #ff0099, 0 0 20px #00ffff;
+    animation: glow 1.5s infinite alternate;
+    z-index: 2;
+}
+
+input::placeholder, 
+textarea::placeholder {
+    overflow: visible;
+    color: #ff0099; /* Sets the placeholder text color to pink */
+    opacity: 1; /* Ensures the color is fully visible */
+}
+
+label {
     font-size: 15px;
     margin-top: 10px;
     font-family: 'Press Start 2P', cursive;
@@ -40,4 +67,37 @@ p {
     to {
         text-shadow: 0 0 10px #fff, 0 0 20px #ff0099, 0 0 40px #00ffff;
     }
+}
+
+input, textarea {
+    font-family: 'Press Start 2P', cursive;
+    color: #ff0099;
+    text-shadow: 0 0 5px #fff, 0 0 10px #ff0099, 0 0 20px #00ffff;
+    width: 15%;
+    height: 15%;
+    padding: 10px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 10px; /* Adds rounded corners */
+    outline: none; /* Removes default focus outline */
+}
+
+button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: transparent; /* Keeps the button transparent */
+    color: white;
+    font-family: 'Press Start 2P', cursive;
+    border: 2px solid white; /* Adds white outline */
+    cursor: pointer;
+    position: relative;
+    transition: 0.3s ease-in-out;
+    text-shadow: 0 0 5px #fff, 0 0 10px #ff0099, 0 0 20px #00ffff;
+    animation: glow 1.5s infinite alternate;
+}
+
+/* Glowing hover effect */
+button:hover {
+    background-color: #ff0099; /* Optional: adds a solid color on hover */
+    box-shadow: 0 0 10px white, 0 0 20px #ff0099, 0 0 30px #00ffff;
 }
